@@ -5,13 +5,13 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">Portfolio</a>
-        <button class="button navbar-burger">
+        <button class="button navbar-burger" @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-      <div class="navbar-menu">
+      <div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
         <div class="navbar-end">
           <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
           <nuxt-link class="navbar-item" to="/about">About</nuxt-link>
@@ -22,3 +22,13 @@
     </nav>
   </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      isOpen: false
+    }
+  }
+}
+</script>

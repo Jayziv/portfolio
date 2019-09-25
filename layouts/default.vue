@@ -2,19 +2,21 @@
 
 <template>
   <div>
-    <navbar></navbar>
+    <navbar/>
     <nuxt/>
+    <bottom/>
   </div>
 </template>
 
 <script>
   import Navbar from '~/components/Navbar'
-
+  import Bottom from '~/components/Bottom'
 
 export default {
 
   components:{
-    Navbar
+    Navbar,
+    Bottom
   }
   
 }
